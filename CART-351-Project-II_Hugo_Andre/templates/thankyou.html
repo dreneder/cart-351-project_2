@@ -1,0 +1,20 @@
+<!-- A child of base.html-->
+{% extends "base.html" %}
+
+{% block content %}
+   
+     <h3>Survey Complete</h3>
+    <section>
+        <!-- Content for home page -->
+        <p><b>Thank you for filling out the survey!</b><br>
+        
+        Your resonse to question 1: {{q_1}}<br>
+        Your resonse to question 2: {{q_2}}<br>
+        Your resonse to question 3: {{q_3}}<br>
+
+        
+            Your answers have been recorded.
+
+
+    </section>
+{% endblock %}

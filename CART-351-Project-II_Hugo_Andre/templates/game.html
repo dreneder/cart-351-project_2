@@ -1,0 +1,23 @@
+<!-- A child of base.html-->
+{% extends "base.html" %}
+
+{% block scriptBlock%}
+{% endblock scriptBlock%}
+
+{% block content %}
+
+     <h3>The Unofficial Family Feud Gameshow</h3>
+    <section>
+        <!-- Content for home page -->
+        <br><p><b>INSTRUCTIONS:</b><br><br>
+        For each of the following prompts, type the answer you believe is the most popular response from our survey.<br>
+        Please ensure that your answer is ONE word long (hypens are valid).<br>
+        After you finish typing your answer, simply press ENTER.</p>
+
+                                                <!--the data from the javacript will be inserted into this span once the user clicks their color-->
+        <!-- <h4> Your favourite colour (displayed in hue-white-black style) is: <span id="colorOutput"> </span></h4><br> -->
+
+        <!--displaying the status message from the fetch request in the python code. This data will be inserted in the javascript file-->
+        <!-- <h4 id = "statusMessage"></h4> -->
+    </section>
+{% endblock %}
