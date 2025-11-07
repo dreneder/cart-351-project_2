@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../static/css/base.css">
 
-        <title>THE UNNOFFICIAL FAMILY FEUD GAMESHOW</title>
+        <title>FLASKEMY FEUD</title>
         
         {% block scriptBlock %}{% endblock scriptBlock %}
     </head>
@@ -19,7 +19,6 @@
                 <ul>
                     <!--Naviagation tabs-->
                     <li> <a href="{{url_for('game')}}">Play </a> </li>
-                    <!-- <li> <a href="{{url_for('home')}}">Home </a> </li> -->
                     <li><a href="{{url_for('home')}}"><img height="120" src="static/images/Flaskemy_feud_logo.svg" alt="Home"></a></li>
                     <li> <a href="{{url_for('survey')}}">Survey </a> </li>
                 </ul>
@@ -29,7 +28,7 @@
             {% block content %}{% endblock %}
         </main>
         <footer>
-            Developed by André Neder de Almeida and Hugo Waterfall
+            Developed by André Neder and Hugo Waterfall
         </footer>
     </body>
 </html>
