@@ -23,7 +23,7 @@ h2{
     font-size:32px;
     padding:5px;
     /* background-color:#29488c; */
-    color: rgb(255,255,255);
+    color: black;
 }
 nav{
     /* display: flex; */
@@ -71,8 +71,28 @@ footer{
     color: #ffffff;
     font-size: 0.8rem;
     text-align: center;
-
 }
+
+input{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    width:10rem;
+    height:2.5rem;
+    border: solid 0.1rem #29488c;
+    background-color:white;
+    color: #29488c;
+}
+
+.submitButton{
+    background-color:#29488c;
+    color: white;
+}
+.submitButton:hover{
+    background-color:white;
+    color: #29488c;
+}
+
 
 .plant-collect{ padding-top: 10px;background-color:rgb(246, 227, 245);padding-bottom:10px;}
 label{display:inline-block; width:30%; margin-top:1%;text-transform: uppercase;}
