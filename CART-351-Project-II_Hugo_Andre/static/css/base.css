@@ -58,6 +58,8 @@ font-weight: bold;
 }
 
 main{
+    display: flex;
+  justify-content: center;
     margin: 0.7rem;
     background-color: rgb(229, 243, 245);
     min-height:calc(75vh);

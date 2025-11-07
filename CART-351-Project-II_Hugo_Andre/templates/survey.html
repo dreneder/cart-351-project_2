@@ -6,10 +6,10 @@
 
 {% block content %}
 
-     <h2>SURVEY</h2>
-    <section>
+<section>
+        <h2>SURVEY</h2>
         <!-- Content for home page -->
-        <br><p><b>INSTRUCTIONS:</b><br><br>
+        <p><b>INSTRUCTIONS:</b><br>
         For each of the following prompts, type an answer that best fits with your experiences.<br>
         Please ensure that each response should be no more than ONE word (hypens are valid). Any responses longer will not be counted.<br>
         After you finish typing your answer, simply press ENTER.</p><br><br><br>
@@ -17,7 +17,7 @@
         <!-- Family Feud Survey -->
         <div class= "formContainer">
             <form id = "ffSurvey" action = "{{url_for('thankyou')}}"></form>
-                <h3>SURVEY</h3>
+                <!-- <h2>SURVEY</h2> -->
                 <fieldset>
                 <p>
                     <label>What is the first item you use after waking up in the morning?</label>
