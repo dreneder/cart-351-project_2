@@ -25,16 +25,20 @@ h2{
 
     font-size:32px;
     padding:5px;
-    background-color:rgb(167, 69, 112);
+    /* background-color:#29488c; */
     color: rgb(255,255,255);
 }
 nav{
+    /* display: flex; */
     padding-bottom:5px;
-    background-color:rgb(167, 69, 112);
+    background-color:#29488c;
+    /* align-items: center; */
 }
 nav ul{
     display:flex;
-    justify-content:right;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    justify-content:center;
 
 }
 nav ul li{

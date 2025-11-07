@@ -14,13 +14,14 @@
 
     <body>
         <header> 
-            <h2> THE UNNOFFICIAL FAMILY FEUD GAMESHOW </h2>
+            <!-- <h2> THE UNNOFFICIAL FAMILY FEUD GAMESHOW </h2> -->
             <nav>
                 <ul>
                     <!--Naviagation tabs-->
-                    <li> <a href="{{url_for('home')}}">Home </a> </li>
-                    <li> <a href="{{url_for('survey')}}">Survey </a> </li>
                     <li> <a href="{{url_for('game')}}">Play </a> </li>
+                    <!-- <li> <a href="{{url_for('home')}}">Home </a> </li> -->
+                    <li><a href="{{url_for('home')}}"><img height="120" src="static/images/Flaskemy_feud_logo.svg" alt="Home"></a></li>
+                    <li> <a href="{{url_for('survey')}}">Survey </a> </li>
                 </ul>
                 </nav>
         </header>
