@@ -5,16 +5,36 @@
    
      <h3>Survey Complete</h3>
     <section>
-        <!-- Content for home page -->
-        <p><b>Thank you for filling out the survey!</b><br>
+        <!-- Content for thank you page -->
+        <p><b>Thank you for filling out the survey!</b><br><br>
         
-        Your resonse to question 1: {{q_1}}<br>
-        Your resonse to question 2: {{q_2}}<br>
-        Your resonse to question 3: {{q_3}}<br>
-
+        You were asked: <b>"What is the first item you use after waking up in the morning?"</b><br>
         
-            Your answers have been recorded.
+        <!-- Checking if user data conforms to our standards. If it doesn't it will be empty (""), as per out python code -->
+        {% if q_1 == "" %}
+            <i>The data you have entered is invalid.</i><br><br>
+        {% else %}
+            You answered: <b>{{q_1}}</b><br><br>
+        {% endif %}
 
+        You were asked: <b>"Which day of the week is most fitting for filing your taxes?"</b><br>
+        
+        {% if q_2 == "" %}
+            <i>The data you have entered is invalid.</i><br><br>
+        {% else %}
+            You answered: <b>{{q_2}}</b><br><br>
+        {% endif %}
+
+        You were asked: <b>"Name a country you would most like to visit."</b><br>
+        
+        {% if q_3 == "" %}
+            <i>The data you have entered is invalid.</i><br><br>
+        {% else %}
+            You answered: <b>{{q_3}}</b><br><br>
+        {% endif %}
+
+        Your answers have been recorded.<br><br>
+        Feel free to give this survey to as many people as you'd like! The more people who take this survey means a better gameshow experience!
 
     </section>
 {% endblock %}
