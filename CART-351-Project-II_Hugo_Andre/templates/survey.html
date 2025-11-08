@@ -1,23 +1,25 @@
-<!-- A child of base.html-->
+<!-- A child of base.html -->
 {% extends "base.html" %}
 
+<!-- Javascript for the FETCH request -->
 {% block scriptBlock%}
+    <script src="{{url_for('static',filename='js/script_get.js')}}"></script>
 {% endblock scriptBlock%}
 
 {% block content %}
 
-<section>
-        <h2>SURVEY</h2>
-        <!-- Content for home page -->
-        <p><b>INSTRUCTIONS:</b><br>
+    <h2>SURVEY</h2>
+    <section>
+        <!-- Content for survey -->
+        <br><p><b>INSTRUCTIONS:</b><br><br>
         For each of the following prompts, type an answer that best fits with your experiences.<br>
-        Please ensure that each response should be no more than ONE word (hypens are valid). Any responses longer will not be counted.<br>
-        After you finish typing your answer, simply press ENTER.</p><br><br><br>
+        Please ensure that each response should be no more than ONE word. Any responses longer will not be counted.<br>
+        After you finish typing your answers, simply press the "Submit Survey Data" button.</p>
 
         <!-- Family Feud Survey -->
         <div class= "formContainer">
-            <form id = "ffSurvey" action = "{{url_for('thankyou')}}"></form>
-                <!-- <h2>SURVEY</h2> -->
+
+            <form id = "ffSurveyFETCH">
                 <fieldset>
                 <p>
                     <label>What is the first item you use after waking up in the morning?</label>
@@ -43,10 +45,7 @@
 
         </div>
 
-                                                <!--the data from the javacript will be inserted into this span once the user clicks their color-->
-        <!-- <h4> Your favourite colour (displayed in hue-white-black style) is: <span id="colorOutput"> </span></h4><br> -->
-
-        <!--displaying the status message from the fetch request in the python code. This data will be inserted in the javascript file-->
-        <!-- <h4 id = "statusMessage"></h4> -->
     </section>
+
+    <div id = "results"> </div>
 {% endblock %}
