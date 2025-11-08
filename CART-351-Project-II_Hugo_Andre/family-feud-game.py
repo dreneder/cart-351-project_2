@@ -1,5 +1,6 @@
 #Importing and setting up the python document
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
+import json
 import os
 
 app = Flask(__name__)
@@ -24,14 +25,30 @@ def survey():
 def game():
      return render_template("game.html")
 
-@app.route("/thankyou")
-def thankyou():
-    app.logger.info(request.args)
-    return render_template("thankyou.html", q_1 = request.args["q_1"])
+@app.route("/getDataFromForm")
+def getDataFromForm():
 
-# #Fetch/Post request route
-# @app.route("/postDataFetch",methods = ['POST'])
-# def postDataFetch():
+     #GET Requests are stored in request.args
+     app.logger.info(request.args)
+
+     #Now we want to store the user data from the survey in variables q_1Data, q_2Data, q_3Data
+     #We also want to .strip() leading or trailing whitespaces
+     q_1Data = request.args["q_1"].strip().upper()
+     q_2Data = request.args["q_2"].strip().upper()
+     q_3Data = request.args["q_3"].strip().upper()
+
+     #BUT, before we can use this data, we have to make sure the user data conforms to our 1-word requirement
+     #We can do this by checking if each string is alphanumeric (isalnum()) - if not, we switch string to empty
+     if (not (q_1Data.isalnum())):
+         q_1Data = ""
+
+     if (not (q_2Data.isalnum())):
+         q_2Data = ""
+
+     if (not (q_3Data.isalnum())):
+         q_3Data = ""
+
+     return ({"data_received": "success", "q_1": q_1Data, "q_2": q_2Data, "q_3": q_3Data})
 
 #       #recieving data from fetch request
 #       data = request.get_json() 
