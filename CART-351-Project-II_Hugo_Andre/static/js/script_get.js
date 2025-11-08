@@ -56,6 +56,8 @@ window.onload = function () {
                 
             }
 
+            document.querySelector("#results").innerHTML += `Data added successfully!<br><br><br>`
+
             catch(err){
 
                 console.log(err)
