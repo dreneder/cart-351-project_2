@@ -1,0 +1,62 @@
+[
+    {
+        "Question": "q1",
+        "Response": "COMB",
+        "Count": 1
+    },
+    {
+        "Question": "q2",
+        "Response": "WEDNESDAY",
+        "Count": 2
+    },
+    {
+        "Question": "q3",
+        "Response": "CANADA",
+        "Count": 3
+    },
+    {
+        "Question": "q1",
+        "Response": "BRUSH",
+        "Count": 4
+    },
+    {
+        "Question": "q3",
+        "Response": "JAPAN",
+        "Count": 1
+    },
+    {
+        "Question": "q1",
+        "Response": "PHONE",
+        "Count": 1
+    },
+    {
+        "Question": "q2",
+        "Response": "TUESDAY",
+        "Count": 4
+    },
+    {
+        "Question": "q3",
+        "Response": "PHILIDELPHIA",
+        "Count": 1
+    },
+    {
+        "Question": "q3",
+        "Response": "CAMBODIA",
+        "Count": 3
+    },
+    {
+        "Question": "q2",
+        "Response": "FRIDAY",
+        "Count": 1
+    },
+    {
+        "Question": "q1",
+        "Response": "TOOTHBRUSH",
+        "Count": 1
+    },
+    {
+        "Question": "q2",
+        "Response": "SUNDAY",
+        "Count": 1
+    }
+]
