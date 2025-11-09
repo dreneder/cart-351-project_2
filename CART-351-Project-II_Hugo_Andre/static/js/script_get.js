@@ -53,10 +53,13 @@ window.onload = function () {
                     document.querySelector("#results").innerHTML += `<p> You would like to visit <b>${resJSON.q_3}</b> more than any other country. To each their own!</p><br><br>`
 
                 }
-                
-            }
 
-            document.querySelector("#results").innerHTML += `Data added successfully!<br><br><br>`
+                document.querySelector("#results").innerHTML += `Data added successfully!<br><br><br>`
+                
+                //Resets the form to clear out user responses after each submit - "event.target" is the HTML form.
+                event.target.reset();
+
+            }
 
             catch(err){
 
