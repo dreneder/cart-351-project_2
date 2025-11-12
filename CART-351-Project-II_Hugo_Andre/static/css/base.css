@@ -21,15 +21,11 @@ body{
 
 h2{
     font-size:32px;
-    padding:5px;
-    /* background-color:#29488c; */
-    color: black;
+    padding: 1rem 0 2rem 0;
+    color:#29488c;
 }
 nav{
-    /* display: flex; */
-    /* padding-bottom:5px; */
     background-color:#29488c;
-    /* align-items: center; */
 }
 nav ul{
     display: flex;
@@ -95,12 +91,106 @@ input{
     color: #29488c;
 }
 
+.gameContainer{
+    display: grid;
+    place-items: center;
+    margin: 2rem 0 1rem 0;
+}
 
-.plant-collect{ padding-top: 10px;background-color:rgb(246, 227, 245);padding-bottom:10px;}
+.gameBoard{
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(to bottom, #000, #524900);
+    color: #fff;
+    margin: 0 0 2rem 0;
+}
+.gameBoard h3{
+    margin: 2rem 0 0 0;
+}
+
+.card_table{
+    width: 100%;
+    height: 3rem;
+    padding: 2rem;
+}
+.card_table tr{
+    font-size: 1rem;
+}
+
+.card_container{
+    border: 0.2rem solid #29488c;
+    /* position:absolute; */
+    width: 20rem;
+    height: 3rem;
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.card:hover{
+    transform: rotateX(180deg);
+}
+
+.card_front, .card_back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card_front{
+    background: #29488c;
+    color: #fff;
+}
+
+.card_back{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    background: #fff;
+    color: #29488c;
+    transform: rotateX(180deg);
+}
+
+.card_back div{
+    padding: 0.8rem;
+    border: 0.3rem #ff0000;
+    border-style: hidden solid hidden solid;
+    text-align: center;
+}
+
+.gameContainer form{display: grid; place-items: center;}
+.gameContainer fieldset{display: grid; place-items: center;width:75%;color:#302e2e;margin:0;margin-top:0;border:none;font-size:14px;text-transform: uppercase;}
+.gameContainer label{display:none; width:30%; margin-top:0;text-transform: uppercase;}
+.gameContainer textarea{margin-top:10px;width:50%;margin-left:0;}
+.gameContainer input{margin-left:0;width:50%;text-align: center;}
+
+.buttonRow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.buttonRow .submitButton{
+    border: solid 0.1rem #29488c;
+    height: 2.5rem;
+    width:25%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
 label{display:inline-block; width:30%; margin-top:1%;text-transform: uppercase;}
 textarea{margin-top:10px;width:50%;margin-left:2%;}
 input{margin-left:2%;width:50%;}
 fieldset{width:75%;color:#302e2e;margin:0 auto;margin-top:2%;border:none;font-size:14px;text-transform: uppercase;}
 select{width:50%;}
-#submitPlant{width:auto;margin-top:10px;}
-.plant-collect h3{padding:5px;text-align: center; font-size:24px;color:rgb(191, 147, 189);}

@@ -19,5 +19,59 @@
 
         <!--displaying the status message from the fetch request in the python code. This data will be inserted in the javascript file-->
         <!-- <h4 id = "statusMessage"></h4> -->
+         <div class="gameContainer">
+            <div class="gameBoard">
+                <h3>What is the first item you use after waking up in the morning?</h3>
+        <table class="card_table">
+            <tr>
+            <td class="card_container">
+                <div class="card">
+                <div class="card_front">1</div>
+                <div class="card_back">
+                    <div>response 1</div>
+                    <div>8</div>
+                </div>
+                </div>
+                </td>
+            <td class="card_container">
+                <div class="card">
+                <div class="card_front">2</div>
+                <div class="card_back">response 2</div>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="card_container">
+                    <div class="card">
+                <div class="card_front">3</div>
+                <div class="card_back">response 3</div>
+                </div>
+                    </td>
+                <td class="card_container">
+                    <div class="card">
+                <div class="card_front">4</div>
+                <div class="card_back">response 4</div>
+                </div>
+            </td>
+            </tr>
+        </table>
+        </div>
+        <h3>Your answer:</h3>
+        <form id = "ffGameFETCH">
+                <fieldset>
+
+                    <label></label>
+                    <input type="text" size="240" maxlength = "40" name = "" required> 
+ 
+                    <div class="buttonRow">
+                        <input class="submitButton" id="submitGameData" type="submit" name="submit" value="Submit">
+                        <button type="button" class="submitButton">Next</button>
+                     </div>
+                </fieldset>
+                
+            </form>
+
+        </div>
+
     </section>
 {% endblock %}

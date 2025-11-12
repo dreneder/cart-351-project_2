@@ -23,6 +23,22 @@ def survey():
 #The game page route
 @app.route("/game")
 def game():
+     def populate_grid(data, question, grid_size=8):
+          responses = [item for item in data if item.get("Question") == question]
+
+          def get_count(item):
+               return item["Count"]
+
+          responses.sort(key=get_count, reverse=True)
+
+          grid = []
+          for i in range(grid_size):
+               if i < len(responses):
+                    grid.append(responses[i]["Response"])
+               else:
+                    grid.append(None)
+          return grid
+
      return render_template("game.html")
 
 @app.route("/getDataFromForm")
