@@ -1,5 +1,5 @@
 #Importing and setting up the python document
-from flask import Flask, render_template, request
+from flask import Flask, render_template, Response, request, jsonify
 import json
 import os
 
@@ -19,27 +19,6 @@ def home():
 @app.route("/survey")
 def survey():
      return render_template("survey.html")
-
-#The game page route
-@app.route("/game")
-def game():
-     def populate_grid(data, question, grid_size=8):
-          responses = [item for item in data if item.get("Question") == question]
-
-          def get_count(item):
-               return item["Count"]
-
-          responses.sort(key=get_count, reverse=True)
-
-          grid = []
-          for i in range(grid_size):
-               if i < len(responses):
-                    grid.append(responses[i]["Response"])
-               else:
-                    grid.append(None)
-          return grid
-
-     return render_template("game.html")
 
 @app.route("/getDataFromForm")
 def getDataFromForm():
@@ -127,6 +106,55 @@ def getDataFromForm():
 
      #Seperate from any server/file code. This simply returns the data from the FETCH request
      return ({"data_received": "success", "q_1": q_1Data, "q_2": q_2Data, "q_3": q_3Data})
+
+
+#The game page route
+@app.route("/game")
+def game():
+
+     # this function creates a list 
+     def populate_grid(data, question, grid_size=4):
+          responses = [item for item in data if item.get("Question") == question]
+
+          #  this will obtain the highest count of an item
+          def get_count(item):
+               return item["Count"]
+
+          responses.sort(key=get_count, reverse=True)
+
+          grid = []
+          for i in range(grid_size):
+               if i < len(responses):
+                    grid.append(responses[i]["Response"])
+               else:
+                    grid.append(None)
+          return grid
+     
+     
+     # Questions dict is passed to the template so JS knows the prompt for each qStage
+     questions = {
+          "question0": "What is the first item you use after waking up in the morning?",
+          "question1": "Which day of the week is most fitting for filing your taxes?",
+          "question2": "Name a country you would most like to visit",
+     }
+
+     return render_template("game.html", questions=questions)
+
+
+# Lightweight API endpoint so the front-end can fetch the latest survey data
+@app.route("/getDataFromGame")
+def game_data():
+    file_path = os.path.join("files", "data.json")
+    if not os.path.exists(file_path):
+        payload = []
+    else:
+        with open(file_path, "r") as data_file:
+            try:
+                payload = json.load(data_file)  # stored as list[dict]
+            except json.JSONDecodeError:
+                payload = []
+
+    return Response(json.dumps(payload), mimetype="application/json")  # raw JSON response for fetch()
 
 #Running the application
 app.run(debug=True)

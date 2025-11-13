@@ -108,6 +108,12 @@ input{
     margin: 2rem 0 0 0;
 }
 
+.gameBoard h1{
+    margin: 0;
+    font-size: 3rem;
+    color: #cad61f;
+}
+
 .card_table{
     width: 100%;
     height: 3rem;
@@ -131,7 +137,7 @@ input{
     transition: all 0.5s ease;
 }
 
-.card:hover{
+.card.flip{
     transform: rotateX(180deg);
 }
 
@@ -144,16 +150,20 @@ input{
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-weight: bold;
 }
 
 .card_front{
+    font-size: 2rem;
     background: #29488c;
     color: #fff;
 }
 
 .card_back{
+    font-size: 1.5rem;
     display: grid;
     grid-template-columns: 80% 20%;
+    vertical-align: middle;
     background: #fff;
     color: #29488c;
     transform: rotateX(180deg);
@@ -161,7 +171,7 @@ input{
 
 .card_back div{
     padding: 0.8rem;
-    border: 0.3rem #ff0000;
+    border: 0.3rem #29488c;
     border-style: hidden solid hidden solid;
     text-align: center;
 }
@@ -172,21 +182,27 @@ input{
 .gameContainer textarea{margin-top:10px;width:50%;margin-left:0;}
 .gameContainer input{margin-left:0;width:50%;text-align: center;}
 
-.buttonRow {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 1rem;
-    margin-top: 2rem;
-}
 
-.buttonRow .submitButton{
-    border: solid 0.1rem #29488c;
+.nextButton{
     height: 2.5rem;
-    width:25%;
+    width:50%;
     font-size: 1rem;
     font-weight: bold;
     margin-top: 0;
+    border: solid 0.1rem #29488c;
+    background-color:#29488c;
+    color: #fff;
+}
+.nextButton:hover{
+    background-color:#fff;
+    color: #29488c;
+}
+
+.nextStage{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto 4rem auto;
 }
 
 label{display:inline-block; width:30%; margin-top:1%;text-transform: uppercase;}

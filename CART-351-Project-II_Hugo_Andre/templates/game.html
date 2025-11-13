@@ -2,6 +2,10 @@
 {% extends "base.html" %}
 
 {% block scriptBlock%}
+<script>
+    window.gameQuestions = {{ questions | tojson }};
+</script>
+<script src="{{url_for('static',filename='js/script_get_game.js')}}"></script>
 {% endblock scriptBlock%}
 
 {% block content %}
@@ -9,48 +13,60 @@
 <section>
         <h2>GAME</h2>
         <!-- Content for home page -->
+         <div id="instructions">
         <br><p><b>INSTRUCTIONS:</b><br><br>
         For each of the following prompts, type the answer you believe is the most popular response from our survey.<br>
         Please ensure that your answer is ONE word long.<br>
         After you finish typing your answer, simply press ENTER.</p>
-
+            </div>
                                                 <!--the data from the javacript will be inserted into this span once the user clicks their color-->
         <!-- <h4> Your favourite colour (displayed in hue-white-black style) is: <span id="colorOutput"> </span></h4><br> -->
 
         <!--displaying the status message from the fetch request in the python code. This data will be inserted in the javascript file-->
         <!-- <h4 id = "statusMessage"></h4> -->
-         <div class="gameContainer">
+         <div class="gameContainer" id="gameContainer">
             <div class="gameBoard">
-                <h3>What is the first item you use after waking up in the morning?</h3>
+                <h3>SCORE</h3>
+                <h1 class="score" id="score">0</h1>
+                <h3 id="question">Question</h3>
         <table class="card_table">
             <tr>
             <td class="card_container">
-                <div class="card">
+                <div class="card" id="card_1">
                 <div class="card_front">1</div>
                 <div class="card_back">
-                    <div>response 1</div>
-                    <div>8</div>
+                    <div id="res_1">response 1</div>
+                    <div id="count_1">8</div>
                 </div>
                 </div>
                 </td>
             <td class="card_container">
-                <div class="card">
+                <div class="card" id="card_2">
                 <div class="card_front">2</div>
-                <div class="card_back">response 2</div>
+                <div class="card_back">
+                    <div id="res_2">response 2</div>
+                    <div id="count_2">8</div>
+                </div>
                 </div>
                 </td>
             </tr>
             <tr>
                 <td class="card_container">
-                    <div class="card">
+                    <div class="card" id="card_3">
                 <div class="card_front">3</div>
-                <div class="card_back">response 3</div>
+                <div class="card_back">
+                    <div id="res_3">response 3</div>
+                    <div id="count_3">8</div>
+                </div>
                 </div>
                     </td>
                 <td class="card_container">
-                    <div class="card">
+                    <div class="card" id="card_4">
                 <div class="card_front">4</div>
-                <div class="card_back">response 4</div>
+                <div class="card_back">
+                    <div id="res_4">response 4</div>
+                    <div id="count_4">8</div>
+                </div>
                 </div>
             </td>
             </tr>
@@ -61,16 +77,14 @@
                 <fieldset>
 
                     <label></label>
-                    <input type="text" size="240" maxlength = "40" name = "" required> 
- 
-                    <div class="buttonRow">
+                    <input type="text" size="240" maxlength = "40" name = "attempt" required> 
                         <input class="submitButton" id="submitGameData" type="submit" name="submit" value="Submit">
-                        <button type="button" class="submitButton">Next</button>
-                     </div>
                 </fieldset>
-                
             </form>
-
+        </div>
+        <div id = "gameover"> </div>
+        <div class="nextStage">
+            <button type="button" class="nextButton">Next</button>
         </div>
 
     </section>
