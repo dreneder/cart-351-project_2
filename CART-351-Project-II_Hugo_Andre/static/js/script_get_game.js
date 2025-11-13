@@ -32,7 +32,12 @@ window.onload = function () {
             if (form) form.style.display = "";
         };
 
-        const questions = window.gameQuestions || {}; // passed in from Flask template
+        // qurestion variables for each stage of the game
+        const questions = {
+            question0: "What is the first item you use after waking up in the morning?",
+            question1: "Which day of the week is most fitting for filing your taxes?",
+            question2: "Name a country you would most like to visit",
+        };
         const questionEl = document.getElementById("question");
         const scoreEl = document.getElementById("score");
         const cardsToShow = 4;

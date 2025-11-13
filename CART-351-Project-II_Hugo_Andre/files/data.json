@@ -57,6 +57,16 @@
     {
         "Question": "q2",
         "Response": "SUNDAY",
+        "Count": 2
+    },
+    {
+        "Question": "q1",
+        "Response": "WALK",
+        "Count": 1
+    },
+    {
+        "Question": "q3",
+        "Response": "CROACIA",
         "Count": 1
     }
 ]

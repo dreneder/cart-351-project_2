@@ -2,9 +2,6 @@
 {% extends "base.html" %}
 
 {% block scriptBlock%}
-<script>
-    window.gameQuestions = {{ questions | tojson }};
-</script>
 <script src="{{url_for('static',filename='js/script_get_game.js')}}"></script>
 {% endblock scriptBlock%}
 

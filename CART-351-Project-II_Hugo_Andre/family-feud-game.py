@@ -112,33 +112,26 @@ def getDataFromForm():
 @app.route("/game")
 def game():
 
-     # this function creates a list 
-     def populate_grid(data, question, grid_size=4):
-          responses = [item for item in data if item.get("Question") == question]
+    # initially the processig was going to be done in python, I will leave this code here for documentation purposes
+     # # this function creates a list 
+     # def populate_grid(data, question, grid_size=4):
+     #      responses = [item for item in data if item.get("Question") == question]
 
-          #  this will obtain the highest count of an item
-          def get_count(item):
-               return item["Count"]
+     #      #  this will obtain the highest count of an item
+     #      def get_count(item):
+     #           return item["Count"]
 
-          responses.sort(key=get_count, reverse=True)
+     #      responses.sort(key=get_count, reverse=True)
 
-          grid = []
-          for i in range(grid_size):
-               if i < len(responses):
-                    grid.append(responses[i]["Response"])
-               else:
-                    grid.append(None)
-          return grid
+     #      grid = []
+     #      for i in range(grid_size):
+     #           if i < len(responses):
+     #                grid.append(responses[i]["Response"])
+     #           else:
+     #                grid.append(None)
+     #      return grid
      
-     
-     # Questions dict is passed to the template so JS knows the prompt for each qStage
-     questions = {
-          "question0": "What is the first item you use after waking up in the morning?",
-          "question1": "Which day of the week is most fitting for filing your taxes?",
-          "question2": "Name a country you would most like to visit",
-     }
-
-     return render_template("game.html", questions=questions)
+     return render_template("game.html")
 
 
 # Lightweight API endpoint so the front-end can fetch the latest survey data
