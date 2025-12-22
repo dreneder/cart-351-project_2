@@ -27,7 +27,7 @@
     {
         "Question": "q1",
         "Response": "PHONE",
-        "Count": 1
+        "Count": 2
     },
     {
         "Question": "q2",
@@ -67,6 +67,36 @@
     {
         "Question": "q3",
         "Response": "CROACIA",
+        "Count": 1
+    },
+    {
+        "Question": "q1",
+        "Response": "TOOTHBRUSH",
+        "Count": 2
+    },
+    {
+        "Question": "q2",
+        "Response": "THURSDAY",
+        "Count": 1
+    },
+    {
+        "Question": "q3",
+        "Response": "NORWAY",
+        "Count": 1
+    },
+    {
+        "Question": "q2",
+        "Response": "SATURDAY",
+        "Count": 1
+    },
+    {
+        "Question": "q3",
+        "Response": "ITALY",
+        "Count": 1
+    },
+    {
+        "Question": "q2",
+        "Response": "MONDAY",
         "Count": 1
     }
 ]
