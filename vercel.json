@@ -1,14 +1,14 @@
 {
     "builds": [
         {
-            "src": "./flaskemy_feud/family-feud-game.py",
+            "src": "./flaskemy_feud_project/family-feud-game.py",
             "use": "@vercel/python"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/flaskemy_feud/family-feud-game.py"
+            "dest": "/flaskemy_feud_project/family-feud-game.py"
         }
     ]
 }
