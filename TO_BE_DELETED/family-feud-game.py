@@ -13,7 +13,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# MongoDB config
+# --- MongoDB config (kept exactly as discussed) ---
 db_user = os.getenv("MONGODB_USER")
 db_pass = quote_plus(os.getenv("DATABASE_PASSWORD"))
 db_name = os.getenv("DATABASE_NAME")

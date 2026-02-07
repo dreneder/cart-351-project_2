@@ -1,0 +1,82 @@
+[
+    {
+        "Question": "q1",
+        "Response": "COMB",
+        "Count": 1
+    },
+    {
+        "Question": "q2",
+        "Response": "WEDNESDAY",
+        "Count": 2
+    },
+    {
+        "Question": "q3",
+        "Response": "CANADA",
+        "Count": 4
+    },
+    {
+        "Question": "q1",
+        "Response": "BRUSH",
+        "Count": 5
+    },
+    {
+        "Question": "q3",
+        "Response": "JAPAN",
+        "Count": 1
+    },
+    {
+        "Question": "q1",
+        "Response": "PHONE",
+        "Count": 2
+    },
+    {
+        "Question": "q2",
+        "Response": "TUESDAY",
+        "Count": 5
+    },
+    {
+        "Question": "q3",
+        "Response": "PHILIDELPHIA",
+        "Count": 1
+    },
+    {
+        "Question": "q3",
+        "Response": "CAMBODIA",
+        "Count": 3
+    },
+    {
+        "Question": "q2",
+        "Response": "FRIDAY",
+        "Count": 1
+    },
+    {
+        "Question": "q1",
+        "Response": "TOILET",
+        "Count": 1
+    },
+    {
+        "Question": "q2",
+        "Response": "SUNDAY",
+        "Count": 2
+    },
+    {
+        "Question": "q1",
+        "Response": "WALK",
+        "Count": 1
+    },
+    {
+        "Question": "q3",
+        "Response": "CROACIA",
+        "Count": 1
+    },
+    {
+        "Question": "q2",
+        "Response": "MONDAY",
+        "Count": 1
+    },
+    {
+        "Question": "q3",
+        "Response": "MEXICO",
+        "Count": 1
+    }
+]
