@@ -188,4 +188,6 @@ def game_data():
 
 
 #Running the application
-app.run(debug=True)
+# app.run(debug=True) # for development only
+if __name__== '__main__':
+     app.run(debug=(True)) # for vercel deployment
